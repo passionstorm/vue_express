@@ -1,10 +1,10 @@
 <template lang="pug">
     footer.main-footer
         .float-right.d-none.d-sm-inline
-            | Anything you want
+            | Vue Express
         strong
-            | Copyright © 2014-2018 
-            a(href='https://adminlte.io') AdminLTE.io
+            | Copyright ©2019 
+            a(href='https://github.com/passionstorm/vue_express')  Passion Storm
             | .
         |  All rights reserved.
 </template>
