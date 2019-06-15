@@ -4,8 +4,6 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: 'App'
-}
-</script>
+<style lang="css">
+@import "./assets/css/adminlte.min.css";
+</style>
