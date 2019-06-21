@@ -14,7 +14,6 @@
 </template>
 
 <script>
-import { close } from "fs";
 export default {
   props: {
     opened: Boolean

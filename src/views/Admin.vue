@@ -4,13 +4,18 @@
           nav-bar(ref="mainHeader")
           sider-bar(ref="sidebar")
           .content-wrapper(:style="{'min-height': contentWrapperHeight}")
-              section.content-header
-              section.content
-                .container-fluid
-                    button.btn.btn-default(@click="modelShow = true") Launch model
-                    button.btn.btn-default(@click="modelShow = false") Close model
-              v-modal(:opened="modelShow" @close="modelShow = false")
-                .xxx(slot="body") thang cho
+            section.content-header 
+              .container-fluid
+                .row.mb-2
+                  .col-sm-6
+                    h1 {{ $route.meta.title }}
+                  .col-sm-6
+                    ol.breadcrumb.float-sm-right
+                      li.breadcrumb-item
+                        a(href='#') Home
+                      li.breadcrumb-item.active Flot
+            section.content
+              router-view  
           footer-bar(ref="mainFooter")
           #sidebar-overlay(@click="closeSideBar")
         .modal-backdrop.fade.show(v-if="isModalShow")
@@ -70,7 +75,6 @@ export default {
     window.addEventListener("resize", t.handleResize);
     t.handleResize();
     t.$nextTick(() => {
-      console.log(t.windowHeight)
       t.headerHeight = t.$refs.mainHeader.$el.clientHeight
       t.footerHeight = t.$refs.mainFooter.$el.clientHeight
       t.sidebarHeight = t.$refs.sidebar.$el.clientHeight

@@ -5,6 +5,9 @@ import Home from './views/Home.vue'
 Vue.use(Router)
 
 export default new Router({
+  mode: 'history',
+  linkActiveClass: "active",// active class for non-exact links.
+  linkExactActiveClass: "active",// active class for *exact* links.
   routes: [
     {
       path: '/',
@@ -14,20 +17,50 @@ export default new Router({
     {
       path: '/about',
       name: 'about',
-      // route level code-splitting
-      // this generates a separate chunk (about.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
       component: () => import('./views/About.vue')
     },
     {
       path: '/login',
       name: 'login',
-      component: () => import('./views/Login.vue')
+      component: () => import('./views/Login')
     },
     {
       path: '/admin',
       name: 'admin',
-      component: () => import('./views/Admin.vue')
-    }
+      component: () => import('./views/Admin'),
+      children: [
+        {
+          path: '/overtime/pass',
+          meta: { title: 'Overtime application'},
+          component: () => import('./views/overtime/OvertimePass')
+        },
+        {
+          path: '/overtime/petitioner',
+          meta: { title: 'Overtime application' },
+          component: () => import('./views/overtime/OvertimePetitioner')
+        },
+        {
+          path: '/overtime/attendace',
+          meta: { title: 'My attendance record' },
+          component: () => import('./views/overtime/Attendance')
+        },
+        {
+          path: '/overtime/leave',
+          meta: { title: 'Temporary use record' },
+          component: () => import('./views/overtime/LeaveRecord')
+        },
+      ]
+    },
+    {
+      path: '/fb',
+      name: 'fb',
+      component: () => import('./views/FB.vue')
+    },
+    {
+      path: '/page',
+      name: 'page',
+      component: () => import('./views/blog/Page')
+    },
+
   ]
 })
