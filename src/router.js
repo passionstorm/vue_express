@@ -31,7 +31,7 @@ export default new Router({
       children: [
         {
           path: '/overtime/pass',
-          meta: { title: 'Overtime application'},
+          meta: { title: 'Overtime application' },
           component: () => import('./views/overtime/OvertimePass')
         },
         {
@@ -48,6 +48,11 @@ export default new Router({
           path: '/overtime/leave',
           meta: { title: 'Temporary use record' },
           component: () => import('./views/overtime/LeaveRecord')
+        },
+        {
+          path: '/users',
+          meta: { title: 'User Management' },
+          component: () => import('./views/account/User')
         },
       ]
     },

@@ -2,7 +2,7 @@
     nav.main-header.navbar.navbar-expand.bg-white.navbar-light.border-bottom
         ul.navbar-nav
             li.nav-item
-            a.nav-link(@click='toggleSideBar', href='#')
+            a.nav-link(@click='toggleSideBar', href='javascript:void(0)')
                 i.fa.fa-bars
             li.nav-item.d-none.d-sm-inline-block
             a.nav-link(href='index3.html') Home

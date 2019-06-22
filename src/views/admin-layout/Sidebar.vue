@@ -46,6 +46,12 @@ export default {
         open: false
       },
       {
+        icon: "fas fa-user",
+        link: "/users",
+        title: "User Management",
+        open: false
+      },
+      {
         title: "HRM managemenet",
         open: false,
         icon: "fas fa-users",
@@ -56,9 +62,21 @@ export default {
             icon: "far fa-circle",
             link: "/overtime/pass"
           },
-          { title: "Overtime Petitioner", icon: "far fa-circle", link: "/overtime/petitioner" },
-          { title: "Attendace", icon: "far fa-circle", link: "/overtime/attendace" },
-          { title: "Leave Record", icon: "far fa-circle", link: "/overtime/leave" },
+          {
+            title: "Overtime Petitioner",
+            icon: "far fa-circle",
+            link: "/overtime/petitioner"
+          },
+          {
+            title: "Attendace",
+            icon: "far fa-circle",
+            link: "/overtime/attendace"
+          },
+          {
+            title: "Leave Record",
+            icon: "far fa-circle",
+            link: "/overtime/leave"
+          }
         ]
       }
     ];

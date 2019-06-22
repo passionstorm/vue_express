@@ -8,5 +8,8 @@
 .form-inline .form-group{
   padding: 0 8px;
 }
+.input-group label.checkbox-inline{
+  padding: 0 8px;
+}
 </style>
 
